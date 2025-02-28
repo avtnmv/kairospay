@@ -467,6 +467,27 @@ footer{
     color: white;
     margin-bottom: 32px;
 }
+.footer-mobile-title{
+font-family: 'Furore';
+background: linear-gradient(89.74deg, rgba(255, 255, 255, 0.7) 25.95%, rgba(0, 0, 0, 0.7) 99.77%), #FFFFFF;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+width: 380px;
+text-align: center;
+font-size: 39px;
+margin: auto;
+
+}
+.footer-mobile-img{
+    display: block;
+    margin: auto;
+    margin-top: -20px;
+}
+.footer-mobile{
+    display: none;
+}
 @media screen and (max-width: 1070px){
     .header{
         margin-bottom: 64px;
@@ -580,4 +601,45 @@ footer{
       .header__actions{
         margin-bottom: 32px;
       }
+      .svg-footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .svg-footer-item{
+        margin-top: 12px;
+      }
+      .foter-item-p {
+        font-size: 16px;
+      }
+      .footer-tel{
+        font-size: 16px;
+      }
+        .footer-margin{
+            font-size: 16px;
+            margin-top: 24px;
+        }
+        .footer-link{
+            font-size: 16px;
+            width: 230px;
+        }
+        .footer-desktop{
+            display: none;
+        }
+        footer{
+            background-image: none;
+            width: unset;
+        }
+        .footer-mobile-end{
+            font-size: 16px;
+            text-align: center;
+            color: white;
+            margin: auto;
+            margin-bottom: 32px;
+            width: 340px;
+        }
+        .footer-mobile{
+            display: block;
+        }
+
 }
