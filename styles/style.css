@@ -477,7 +477,7 @@ main{
     }
     .about__title{
         margin-bottom: 12px;
-        margin-bottom: 32px;
+        margin-top: 32px;
     }
     .links-container{
         flex-direction: column;
