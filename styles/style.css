@@ -508,6 +508,7 @@ main{
         margin: auto;
       }
       main{
-        background-position: top;
+        background-position-y: -100px;
+
       }
 }
