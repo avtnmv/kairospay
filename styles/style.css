@@ -402,6 +402,71 @@ main{
     width: 310px;
     text-align: center;
 }
+footer{
+    background-image: url(../assets/images/footer-bg.png);
+    background-size: cover;
+    width: 1200px;
+    background-color: rgba(0, 0, 0, 0.76);
+    background-blend-mode: multiply;
+    background-position-x: right -380px;
+    margin: auto;
+    background-repeat: no-repeat;
+
+}
+.footer-container{
+    display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  gap: 216px;
+  align-items: baseline;
+}
+.svg-footer {
+    position: relative; /* Делаем контейнером для абсолютных элементов */
+    display: inline-block; /* Чтобы размер подстраивался под содержимое */
+    margin-bottom: 48px;
+}
+
+.svg-footer-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрируем элемент */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer-link{
+    width: 292px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: linear-gradient(110.93deg, #369AE9 24.01%, #71ABF3 53.98%, #439CE2 89.17%);
+    border-radius: 10px;
+    color: white;
+
+}
+.footer-margin{
+    margin-top: 32px;
+    font-size: 18px;
+}
+.foter-item-p{
+    font-size: 20px;
+}
+.footer-tel{
+    font-size: 20px;
+    color: white;
+    text-decoration:underline;
+}
+.footer-end{
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    margin-bottom: 32px;
+}
 @media screen and (max-width: 1070px){
     .header{
         margin-bottom: 64px;
