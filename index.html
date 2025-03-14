@@ -9,6 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
@@ -30,7 +35,7 @@
                     </p>
         
                     <div class="header__actions">
-                        <a href="" class="header__link">
+                        <a href="https://t.me/KAIROSPAY" class="header__link">
                             Смотреть курсы
                             <svg class="header__icon" width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 6.412V.589C0 .065.775-.197 1.227.173L4.79 3.084c.281.23.281.602 0 .83L1.227 6.825C.775 7.197 0 6.935 0 6.412" fill="#000"/>
@@ -62,7 +67,7 @@
                 </p>
     
             <div class="header__actions">
-                <a href="" class="header__link">
+                <a href="https://t.me/KAIROSPAY" class="header__link">
                     Смотреть курсы
                     <svg class="header__icon" width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 6.412V.589C0 .065.775-.197 1.227.173L4.79 3.084c.281.23.281.602 0 .83L1.227 6.825C.775 7.197 0 6.935 0 6.412" fill="#000"/>
@@ -74,6 +79,334 @@
         </header>
     
         <main>
+            <h2 class="header-exchange-container-title">Быстрый обмен в Турции</h2>
+            <div class="header-exchange-container">
+                <div class="header__exchange">
+                    <div class="header__exchange-block">
+                        <label class="header__exchange-label">Выберите город:</label>
+                        <div class="custom-select city-select">
+                            <svg class="header__custom-select-arrow" viewBox="0 -4.5 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 1.39 18.594 0 9.987 8.261l-.918-.881.005.005L1.427.045 0 1.414 9.987 11z" fill-rule="evenodd"/>
+                            </svg>
+                            <div class="custom-select__selected" data-value="Анталья">
+                                <span class="custom-select__text">Анталья</span>
+                            </div>
+                            <div class="custom-select__options" id="city-select-options">
+                                <div class="custom-select__option" data-value="Анталья" onclick="selectOption('Анталья', 'city')">
+                                    <span class="custom-select__text">Анталья</span>
+                                </div>
+                                <div class="custom-select__option" data-value="Аланья" onclick="selectOption('Аланья', 'city')">
+                                    <span class="custom-select__text">Аланья</span>
+                                </div>
+                                <div class="custom-select__option" data-value="Стамбул" onclick="selectOption('Стамбул', 'city')">
+                                    <span class="custom-select__text">Анталья</span>
+                                </div>
+                                <div class="custom-select__option" data-value="Мерсин" onclick="selectOption('Мерсин', 'city')">
+                                    <span class="custom-select__text">Мерсин</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="header__exchange-block">
+                        <label class="header__exchange-label">Выберите валюту:</label>
+                        <div class="custom-select currency-select">
+                            <svg class="header__custom-select-arrow" viewBox="0 -4.5 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 1.39 18.594 0 9.987 8.261l-.918-.881.005.005L1.427.045 0 1.414 9.987 11z" fill-rule="evenodd"/>
+                            </svg>
+                            <div class="custom-select__selected">
+                                <img src="./assets/images/usdt-icon.svg" class="custom-select__icon" alt="usdt-icon">
+                                <span class="custom-select__text">Tether USDT</span>
+                            </div>
+                            <div class="custom-select__options" id="custom-select-options">
+                                <div class="custom-select__option" data-value="usdt" onclick="selectOption('usdt', 'currency')">
+                                    <img src="./assets/images/usdt-icon.svg" class="custom-select__icon" alt="usdt-icon">
+                                    <span class="custom-select__text">Tether USDT</span>
+                                </div>
+                                <div class="custom-select__option" data-value="rub" onclick="selectOption('rub', 'currency')">
+                                    <img src="./assets/images/rub-icon.svg" class="custom-select__icon" alt="rub-icon">
+                                    <span class="custom-select__text">RUB с карты</span>
+                                </div>
+                                <div class="custom-select__option" data-value="uah" onclick="selectOption('uah', 'currency')">
+                                    <img src="./assets/images/uah-icon.svg" class="custom-select__icon" alt="uah-icon">
+                                    <span class="custom-select__text">UAH с карты</span>
+                                </div>
+                                <div class="custom-select__option" data-value="usd" onclick="selectOption('usd', 'currency')">
+                                    <img src="./assets/images/usd-icon.svg" class="custom-select__icon" alt="usd-icon">
+                                    <span class="custom-select__text">USD наличные</span>
+                                </div>
+                                <div class="custom-select__option" data-value="eur" onclick="selectOption('eur', 'currency')">
+                                    <img src="./assets/images/eur-icon.svg" class="custom-select__icon" alt="eur-icon">
+                                    <span class="custom-select__text">EUR наличные</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="header__exchange-block">
+                        <label class="header__exchange-label">Отдаете:</label>
+                        <input type="text" id="amount" class="header__exchange-input" placeholder="Введите сумму" 
+                            inputmode="decimal" pattern="[0-9]*[.]?[0-9]*" 
+                            onkeypress="return validateInput(event)" 
+                            oninput="updateReceivedAmount()">
+                        <div id="amount-hints" class="header__exchange-hints"></div>
+                    </div>
+                
+                    <div class="header__exchange-block">
+                        <label class="header__exchange-label">Получаете:</label>
+                        <div class="header__exchange-line">
+                            <p id="received-amount" class="header__exchange-received-amount"></p>
+                            <div class="custom-select receive-select">
+                                <div class="custom-select__selected" id="receive-selected">
+                                    <div class="currency-preview">
+                                        <img src="./assets/images/try-icon.svg" class="custom-select__icon" alt="try-icon">
+                                        <svg class="header__custom-select-arrow" viewBox="0 -4.5 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20 1.39 18.594 0 9.987 8.261l-.918-.881.005.005L1.427.045 0 1.414 9.987 11z" fill-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="custom-select__options" id="receive-select-options"></div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <a href="https://t.me/KAIROSPAY" class="header__link">
+                        <svg width="25" height="25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.36 2.855C19.227 4.152 5.793 9.717 2.081 11.233c-2.49.972-1.032 1.883-1.032 1.883s2.125.728 3.946 1.275c1.822.546 2.793-.061 2.793-.061l8.561-5.768c3.036-2.064 2.308-.364 1.579.364-1.579 1.579-4.19 4.068-6.375 6.072-.972.85-.486 1.579-.061 1.943 1.579 1.335 5.89 4.068 6.133 4.25 1.282.908 3.805 2.215 4.189-.546l1.518-9.533c.486-3.218.971-6.193 1.032-7.043.182-2.064-2.004-1.214-2.004-1.214Z" fill="#fff"/></svg>
+            
+                        Обменять сейчас
+                    </a>
+                </div>
+        
+                <div class="header_exchange_second">
+                    <div class="header_exchange_second_block">
+                        <h3>9</h3>
+                        <p>Лицензированных офисов</p>
+                    </div>
+
+                    <div class="header_exchange_second_block">
+                        <h3>Города</h3>
+                        <p>Стамбул, Анталья, Аланья, Мерсин, Бодрум</p>
+                    </div>
+
+                    <div class="header_exchange_second_block">
+                        <h3>7 000 000$</h3>
+                        <p>Постоянный резерв</p>
+                    </div>
+
+                    <div class="slider-last-exchanges">
+                          <div class="slider-wrapper slider-wrapper2">
+  <div class="swiper mySwiper2">
+    <div class="swiper-wrapper">
+
+    <div class="swiper-slide swiper-slide-exchanges">
+       <div class="last-exchange__item">
+          <div class="last-exchange__item-svg">
+            <svg class="svg-exchange" width="9" height="10" viewBox="0 -5 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M.794 3.582V3.3c0-.233.168-.422.375-.422h5.625v-.844c0-.376.405-.563.64-.298l1.25 1.406a.46.46 0 0 1 0 .597l-1.25 1.406c-.234.264-.64.079-.64-.298v-.844H1.17c-.207 0-.375-.19-.375-.422M8.42 6.254H2.794V5.41c0-.375-.404-.564-.64-.298L.904 6.518a.46.46 0 0 0 0 .597l1.25 1.406c.235.264.64.078.64-.298v-.844H8.42c.208 0 .375-.19.375-.422v-.281c0-.233-.167-.422-.375-.422" fill="#D8B576"/></g><defs><clipPath id="a"><path fill="#fff" d="M.794.629h8v9h-8z"/></clipPath></defs></svg>
+
+            <p class="last-exchange__rate"> → </p>
+          </div>
+
+            <div class="last-exchange__course-container">
+              <svg  class="svg-exchange" width="13" height="12" viewBox="0 -4 13 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.265 7.435 2.24 6.417 1.213 7.435m9.234-2.626 1.026 1.019 1.026-1.019" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.473 5.828a4.57 4.57 0 0 0-1.352-3.24 4.65 4.65 0 0 0-6.598.07A4.6 4.6 0 0 0 2.5 4.298m-.262 2.117A4.56 4.56 0 0 0 3.296 9.33a4.62 4.62 0 0 0 2.683 1.58 4.65 4.65 0 0 0 3.084-.475 4.6 4.6 0 0 0 2.075-2.314" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.456 7.247c.03.34.193.656.455.879s.601.334.945.312c1.13 0 1.4-.644 1.4-1.19 0-.547-.466-1.127-1.4-1.127s-1.4-.365-1.4-1.111c.013-.258.105-.507.263-.712a1.29 1.29 0 0 1 1.137-.493c.345-.014.682.102.942.326.261.224.425.539.459.879m-1.4 4.122V8.53m0-5.42v.694" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <p class="last-exchange__course">1 USDT = 0.998 USD</p>
+            </div>
+
+          <div class="hr"></div>
+
+          <div class="last-exchange__date-container">
+            <svg class="svg-exchange" width="1" height="1" viewBox="0 -4 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.931.93a.35.35 0 0 1 .35.35v.654H7.04v-.65a.35.35 0 1 1 .7 0v.65h1.355a1 1 0 0 1 1 1V9.93a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1V2.933a1 1 0 0 1 1-1H2.58V1.28a.35.35 0 0 1 .35-.35M.795 4.8v5.13a.3.3 0 0 0 .3.3h8a.3.3 0 0 0 .3-.3V4.807zm2.633 3.44v.833h-.833V8.24zm2.083 0v.833h-.833V8.24zm2.084 0v.833H6.76V8.24zM3.428 6.25v.833h-.833V6.25zm2.083 0v.833h-.833V6.25zm2.084 0v.833H6.76V6.25zM2.58 2.633H1.095a.3.3 0 0 0-.3.3v1.168l8.6.007V2.933a.3.3 0 0 0-.3-.3H7.74v.465a.35.35 0 0 1-.7 0v-.465H3.28v.46a.35.35 0 0 1-.7 0z" fill="#D8B576"/></svg>
+
+            <p class="last-exchange__date">03.03.2025</p>
+          </div>
+          
+      </div>
+    </div>
+    
+    <div class="swiper-slide swiper-slide-exchanges">
+      <div class="last-exchange__item">
+         <div class="last-exchange__item-svg">
+           <svg class="svg-exchange" width="9" height="10" viewBox="0 -5 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M.794 3.582V3.3c0-.233.168-.422.375-.422h5.625v-.844c0-.376.405-.563.64-.298l1.25 1.406a.46.46 0 0 1 0 .597l-1.25 1.406c-.234.264-.64.079-.64-.298v-.844H1.17c-.207 0-.375-.19-.375-.422M8.42 6.254H2.794V5.41c0-.375-.404-.564-.64-.298L.904 6.518a.46.46 0 0 0 0 .597l1.25 1.406c.235.264.64.078.64-.298v-.844H8.42c.208 0 .375-.19.375-.422v-.281c0-.233-.167-.422-.375-.422" fill="#D8B576"/></g><defs><clipPath id="a"><path fill="#fff" d="M.794.629h8v9h-8z"/></clipPath></defs></svg>
+
+           <p class="last-exchange__rate"> → </p>
+         </div>
+
+           <div class="last-exchange__course-container">
+             <svg  class="svg-exchange" width="13" height="12" viewBox="0 -4 13 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.265 7.435 2.24 6.417 1.213 7.435m9.234-2.626 1.026 1.019 1.026-1.019" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.473 5.828a4.57 4.57 0 0 0-1.352-3.24 4.65 4.65 0 0 0-6.598.07A4.6 4.6 0 0 0 2.5 4.298m-.262 2.117A4.56 4.56 0 0 0 3.296 9.33a4.62 4.62 0 0 0 2.683 1.58 4.65 4.65 0 0 0 3.084-.475 4.6 4.6 0 0 0 2.075-2.314" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.456 7.247c.03.34.193.656.455.879s.601.334.945.312c1.13 0 1.4-.644 1.4-1.19 0-.547-.466-1.127-1.4-1.127s-1.4-.365-1.4-1.111c.013-.258.105-.507.263-.712a1.29 1.29 0 0 1 1.137-.493c.345-.014.682.102.942.326.261.224.425.539.459.879m-1.4 4.122V8.53m0-5.42v.694" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/></svg>
+             <p class="last-exchange__course">1 USDT = 0.998 USD</p>
+           </div>
+
+         <div class="hr"></div>
+
+         <div class="last-exchange__date-container">
+           <svg class="svg-exchange" width="1" height="1" viewBox="0 -4 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.931.93a.35.35 0 0 1 .35.35v.654H7.04v-.65a.35.35 0 1 1 .7 0v.65h1.355a1 1 0 0 1 1 1V9.93a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1V2.933a1 1 0 0 1 1-1H2.58V1.28a.35.35 0 0 1 .35-.35M.795 4.8v5.13a.3.3 0 0 0 .3.3h8a.3.3 0 0 0 .3-.3V4.807zm2.633 3.44v.833h-.833V8.24zm2.083 0v.833h-.833V8.24zm2.084 0v.833H6.76V8.24zM3.428 6.25v.833h-.833V6.25zm2.083 0v.833h-.833V6.25zm2.084 0v.833H6.76V6.25zM2.58 2.633H1.095a.3.3 0 0 0-.3.3v1.168l8.6.007V2.933a.3.3 0 0 0-.3-.3H7.74v.465a.35.35 0 0 1-.7 0v-.465H3.28v.46a.35.35 0 0 1-.7 0z" fill="#D8B576"/></svg>
+
+           <p class="last-exchange__date">03.03.2025</p>
+         </div>
+         
+     </div>
+   </div>
+
+   <div class="swiper-slide swiper-slide-exchanges">
+    <div class="last-exchange__item">
+       <div class="last-exchange__item-svg">
+         <svg class="svg-exchange" width="9" height="10" viewBox="0 -5 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M.794 3.582V3.3c0-.233.168-.422.375-.422h5.625v-.844c0-.376.405-.563.64-.298l1.25 1.406a.46.46 0 0 1 0 .597l-1.25 1.406c-.234.264-.64.079-.64-.298v-.844H1.17c-.207 0-.375-.19-.375-.422M8.42 6.254H2.794V5.41c0-.375-.404-.564-.64-.298L.904 6.518a.46.46 0 0 0 0 .597l1.25 1.406c.235.264.64.078.64-.298v-.844H8.42c.208 0 .375-.19.375-.422v-.281c0-.233-.167-.422-.375-.422" fill="#D8B576"/></g><defs><clipPath id="a"><path fill="#fff" d="M.794.629h8v9h-8z"/></clipPath></defs></svg>
+
+         <p class="last-exchange__rate"> → </p>
+       </div>
+
+         <div class="last-exchange__course-container">
+           <svg  class="svg-exchange" width="13" height="12" viewBox="0 -4 13 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.265 7.435 2.24 6.417 1.213 7.435m9.234-2.626 1.026 1.019 1.026-1.019" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.473 5.828a4.57 4.57 0 0 0-1.352-3.24 4.65 4.65 0 0 0-6.598.07A4.6 4.6 0 0 0 2.5 4.298m-.262 2.117A4.56 4.56 0 0 0 3.296 9.33a4.62 4.62 0 0 0 2.683 1.58 4.65 4.65 0 0 0 3.084-.475 4.6 4.6 0 0 0 2.075-2.314" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.456 7.247c.03.34.193.656.455.879s.601.334.945.312c1.13 0 1.4-.644 1.4-1.19 0-.547-.466-1.127-1.4-1.127s-1.4-.365-1.4-1.111c.013-.258.105-.507.263-.712a1.29 1.29 0 0 1 1.137-.493c.345-.014.682.102.942.326.261.224.425.539.459.879m-1.4 4.122V8.53m0-5.42v.694" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/></svg>
+           <p class="last-exchange__course">1 USDT = 0.998 USD</p>
+         </div>
+
+       <div class="hr"></div>
+
+       <div class="last-exchange__date-container">
+         <svg class="svg-exchange" width="1" height="1" viewBox="0 -4 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.931.93a.35.35 0 0 1 .35.35v.654H7.04v-.65a.35.35 0 1 1 .7 0v.65h1.355a1 1 0 0 1 1 1V9.93a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1V2.933a1 1 0 0 1 1-1H2.58V1.28a.35.35 0 0 1 .35-.35M.795 4.8v5.13a.3.3 0 0 0 .3.3h8a.3.3 0 0 0 .3-.3V4.807zm2.633 3.44v.833h-.833V8.24zm2.083 0v.833h-.833V8.24zm2.084 0v.833H6.76V8.24zM3.428 6.25v.833h-.833V6.25zm2.083 0v.833h-.833V6.25zm2.084 0v.833H6.76V6.25zM2.58 2.633H1.095a.3.3 0 0 0-.3.3v1.168l8.6.007V2.933a.3.3 0 0 0-.3-.3H7.74v.465a.35.35 0 0 1-.7 0v-.465H3.28v.46a.35.35 0 0 1-.7 0z" fill="#D8B576"/></svg>
+
+         <p class="last-exchange__date">03.03.2025</p>
+       </div>
+       
+   </div>
+ </div>
+
+ <div class="swiper-slide swiper-slide-exchanges">
+  <div class="last-exchange__item">
+     <div class="last-exchange__item-svg">
+       <svg class="svg-exchange" width="9" height="10" viewBox="0 -5 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M.794 3.582V3.3c0-.233.168-.422.375-.422h5.625v-.844c0-.376.405-.563.64-.298l1.25 1.406a.46.46 0 0 1 0 .597l-1.25 1.406c-.234.264-.64.079-.64-.298v-.844H1.17c-.207 0-.375-.19-.375-.422M8.42 6.254H2.794V5.41c0-.375-.404-.564-.64-.298L.904 6.518a.46.46 0 0 0 0 .597l1.25 1.406c.235.264.64.078.64-.298v-.844H8.42c.208 0 .375-.19.375-.422v-.281c0-.233-.167-.422-.375-.422" fill="#D8B576"/></g><defs><clipPath id="a"><path fill="#fff" d="M.794.629h8v9h-8z"/></clipPath></defs></svg>
+
+       <p class="last-exchange__rate"> → </p>
+     </div>
+
+       <div class="last-exchange__course-container">
+         <svg  class="svg-exchange" width="13" height="12" viewBox="0 -4 13 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.265 7.435 2.24 6.417 1.213 7.435m9.234-2.626 1.026 1.019 1.026-1.019" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.473 5.828a4.57 4.57 0 0 0-1.352-3.24 4.65 4.65 0 0 0-6.598.07A4.6 4.6 0 0 0 2.5 4.298m-.262 2.117A4.56 4.56 0 0 0 3.296 9.33a4.62 4.62 0 0 0 2.683 1.58 4.65 4.65 0 0 0 3.084-.475 4.6 4.6 0 0 0 2.075-2.314" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.456 7.247c.03.34.193.656.455.879s.601.334.945.312c1.13 0 1.4-.644 1.4-1.19 0-.547-.466-1.127-1.4-1.127s-1.4-.365-1.4-1.111c.013-.258.105-.507.263-.712a1.29 1.29 0 0 1 1.137-.493c.345-.014.682.102.942.326.261.224.425.539.459.879m-1.4 4.122V8.53m0-5.42v.694" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/></svg>
+         <p class="last-exchange__course">1 USDT = 0.998 USD</p>
+       </div>
+
+     <div class="hr"></div>
+
+     <div class="last-exchange__date-container">
+       <svg class="svg-exchange" width="1" height="1" viewBox="0 -4 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.931.93a.35.35 0 0 1 .35.35v.654H7.04v-.65a.35.35 0 1 1 .7 0v.65h1.355a1 1 0 0 1 1 1V9.93a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1V2.933a1 1 0 0 1 1-1H2.58V1.28a.35.35 0 0 1 .35-.35M.795 4.8v5.13a.3.3 0 0 0 .3.3h8a.3.3 0 0 0 .3-.3V4.807zm2.633 3.44v.833h-.833V8.24zm2.083 0v.833h-.833V8.24zm2.084 0v.833H6.76V8.24zM3.428 6.25v.833h-.833V6.25zm2.083 0v.833h-.833V6.25zm2.084 0v.833H6.76V6.25zM2.58 2.633H1.095a.3.3 0 0 0-.3.3v1.168l8.6.007V2.933a.3.3 0 0 0-.3-.3H7.74v.465a.35.35 0 0 1-.7 0v-.465H3.28v.46a.35.35 0 0 1-.7 0z" fill="#D8B576"/></svg>
+
+       <p class="last-exchange__date">03.03.2025</p>
+     </div>
+     
+ </div>
+</div>
+
+<div class="swiper-slide swiper-slide-exchanges">
+  <div class="last-exchange__item">
+     <div class="last-exchange__item-svg">
+       <svg class="svg-exchange" width="9" height="10" viewBox="0 -5 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M.794 3.582V3.3c0-.233.168-.422.375-.422h5.625v-.844c0-.376.405-.563.64-.298l1.25 1.406a.46.46 0 0 1 0 .597l-1.25 1.406c-.234.264-.64.079-.64-.298v-.844H1.17c-.207 0-.375-.19-.375-.422M8.42 6.254H2.794V5.41c0-.375-.404-.564-.64-.298L.904 6.518a.46.46 0 0 0 0 .597l1.25 1.406c.235.264.64.078.64-.298v-.844H8.42c.208 0 .375-.19.375-.422v-.281c0-.233-.167-.422-.375-.422" fill="#D8B576"/></g><defs><clipPath id="a"><path fill="#fff" d="M.794.629h8v9h-8z"/></clipPath></defs></svg>
+
+       <p class="last-exchange__rate"> → </p>
+     </div>
+
+       <div class="last-exchange__course-container">
+         <svg  class="svg-exchange" width="13" height="12" viewBox="0 -4 13 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.265 7.435 2.24 6.417 1.213 7.435m9.234-2.626 1.026 1.019 1.026-1.019" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.473 5.828a4.57 4.57 0 0 0-1.352-3.24 4.65 4.65 0 0 0-6.598.07A4.6 4.6 0 0 0 2.5 4.298m-.262 2.117A4.56 4.56 0 0 0 3.296 9.33a4.62 4.62 0 0 0 2.683 1.58 4.65 4.65 0 0 0 3.084-.475 4.6 4.6 0 0 0 2.075-2.314" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.456 7.247c.03.34.193.656.455.879s.601.334.945.312c1.13 0 1.4-.644 1.4-1.19 0-.547-.466-1.127-1.4-1.127s-1.4-.365-1.4-1.111c.013-.258.105-.507.263-.712a1.29 1.29 0 0 1 1.137-.493c.345-.014.682.102.942.326.261.224.425.539.459.879m-1.4 4.122V8.53m0-5.42v.694" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/></svg>
+         <p class="last-exchange__course">1 USDT = 0.998 USD</p>
+       </div>
+
+     <div class="hr"></div>
+
+     <div class="last-exchange__date-container">
+       <svg class="svg-exchange" width="1" height="1" viewBox="0 -4 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.931.93a.35.35 0 0 1 .35.35v.654H7.04v-.65a.35.35 0 1 1 .7 0v.65h1.355a1 1 0 0 1 1 1V9.93a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1V2.933a1 1 0 0 1 1-1H2.58V1.28a.35.35 0 0 1 .35-.35M.795 4.8v5.13a.3.3 0 0 0 .3.3h8a.3.3 0 0 0 .3-.3V4.807zm2.633 3.44v.833h-.833V8.24zm2.083 0v.833h-.833V8.24zm2.084 0v.833H6.76V8.24zM3.428 6.25v.833h-.833V6.25zm2.083 0v.833h-.833V6.25zm2.084 0v.833H6.76V6.25zM2.58 2.633H1.095a.3.3 0 0 0-.3.3v1.168l8.6.007V2.933a.3.3 0 0 0-.3-.3H7.74v.465a.35.35 0 0 1-.7 0v-.465H3.28v.46a.35.35 0 0 1-.7 0z" fill="#D8B576"/></svg>
+
+       <p class="last-exchange__date">03.03.2025</p>
+     </div>
+     
+ </div>
+</div>
+
+<div class="swiper-slide swiper-slide-exchanges">
+  <div class="last-exchange__item">
+     <div class="last-exchange__item-svg">
+       <svg class="svg-exchange" width="9" height="10" viewBox="0 -5 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M.794 3.582V3.3c0-.233.168-.422.375-.422h5.625v-.844c0-.376.405-.563.64-.298l1.25 1.406a.46.46 0 0 1 0 .597l-1.25 1.406c-.234.264-.64.079-.64-.298v-.844H1.17c-.207 0-.375-.19-.375-.422M8.42 6.254H2.794V5.41c0-.375-.404-.564-.64-.298L.904 6.518a.46.46 0 0 0 0 .597l1.25 1.406c.235.264.64.078.64-.298v-.844H8.42c.208 0 .375-.19.375-.422v-.281c0-.233-.167-.422-.375-.422" fill="#D8B576"/></g><defs><clipPath id="a"><path fill="#fff" d="M.794.629h8v9h-8z"/></clipPath></defs></svg>
+
+       <p class="last-exchange__rate"> → </p>
+     </div>
+
+       <div class="last-exchange__course-container">
+         <svg  class="svg-exchange" width="13" height="12" viewBox="0 -4 13 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.265 7.435 2.24 6.417 1.213 7.435m9.234-2.626 1.026 1.019 1.026-1.019" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.473 5.828a4.57 4.57 0 0 0-1.352-3.24 4.65 4.65 0 0 0-6.598.07A4.6 4.6 0 0 0 2.5 4.298m-.262 2.117A4.56 4.56 0 0 0 3.296 9.33a4.62 4.62 0 0 0 2.683 1.58 4.65 4.65 0 0 0 3.084-.475 4.6 4.6 0 0 0 2.075-2.314" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.456 7.247c.03.34.193.656.455.879s.601.334.945.312c1.13 0 1.4-.644 1.4-1.19 0-.547-.466-1.127-1.4-1.127s-1.4-.365-1.4-1.111c.013-.258.105-.507.263-.712a1.29 1.29 0 0 1 1.137-.493c.345-.014.682.102.942.326.261.224.425.539.459.879m-1.4 4.122V8.53m0-5.42v.694" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/></svg>
+         <p class="last-exchange__course">1 USDT = 0.998 USD</p>
+       </div>
+
+     <div class="hr"></div>
+
+     <div class="last-exchange__date-container">
+       <svg class="svg-exchange" width="1" height="1" viewBox="0 -4 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.931.93a.35.35 0 0 1 .35.35v.654H7.04v-.65a.35.35 0 1 1 .7 0v.65h1.355a1 1 0 0 1 1 1V9.93a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1V2.933a1 1 0 0 1 1-1H2.58V1.28a.35.35 0 0 1 .35-.35M.795 4.8v5.13a.3.3 0 0 0 .3.3h8a.3.3 0 0 0 .3-.3V4.807zm2.633 3.44v.833h-.833V8.24zm2.083 0v.833h-.833V8.24zm2.084 0v.833H6.76V8.24zM3.428 6.25v.833h-.833V6.25zm2.083 0v.833h-.833V6.25zm2.084 0v.833H6.76V6.25zM2.58 2.633H1.095a.3.3 0 0 0-.3.3v1.168l8.6.007V2.933a.3.3 0 0 0-.3-.3H7.74v.465a.35.35 0 0 1-.7 0v-.465H3.28v.46a.35.35 0 0 1-.7 0z" fill="#D8B576"/></svg>
+
+       <p class="last-exchange__date">03.03.2025</p>
+     </div>
+     
+ </div>
+</div>
+
+<div class="swiper-slide swiper-slide-exchanges">
+  <div class="last-exchange__item">
+     <div class="last-exchange__item-svg">
+       <svg class="svg-exchange" width="9" height="10" viewBox="0 -5 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M.794 3.582V3.3c0-.233.168-.422.375-.422h5.625v-.844c0-.376.405-.563.64-.298l1.25 1.406a.46.46 0 0 1 0 .597l-1.25 1.406c-.234.264-.64.079-.64-.298v-.844H1.17c-.207 0-.375-.19-.375-.422M8.42 6.254H2.794V5.41c0-.375-.404-.564-.64-.298L.904 6.518a.46.46 0 0 0 0 .597l1.25 1.406c.235.264.64.078.64-.298v-.844H8.42c.208 0 .375-.19.375-.422v-.281c0-.233-.167-.422-.375-.422" fill="#D8B576"/></g><defs><clipPath id="a"><path fill="#fff" d="M.794.629h8v9h-8z"/></clipPath></defs></svg>
+
+       <p class="last-exchange__rate"> → </p>
+     </div>
+
+       <div class="last-exchange__course-container">
+         <svg  class="svg-exchange" width="13" height="12" viewBox="0 -4 13 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.265 7.435 2.24 6.417 1.213 7.435m9.234-2.626 1.026 1.019 1.026-1.019" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.473 5.828a4.57 4.57 0 0 0-1.352-3.24 4.65 4.65 0 0 0-6.598.07A4.6 4.6 0 0 0 2.5 4.298m-.262 2.117A4.56 4.56 0 0 0 3.296 9.33a4.62 4.62 0 0 0 2.683 1.58 4.65 4.65 0 0 0 3.084-.475 4.6 4.6 0 0 0 2.075-2.314" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.456 7.247c.03.34.193.656.455.879s.601.334.945.312c1.13 0 1.4-.644 1.4-1.19 0-.547-.466-1.127-1.4-1.127s-1.4-.365-1.4-1.111c.013-.258.105-.507.263-.712a1.29 1.29 0 0 1 1.137-.493c.345-.014.682.102.942.326.261.224.425.539.459.879m-1.4 4.122V8.53m0-5.42v.694" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/></svg>
+         <p class="last-exchange__course">1 USDT = 0.998 USD</p>
+       </div>
+
+     <div class="hr"></div>
+
+     <div class="last-exchange__date-container">
+       <svg class="svg-exchange" width="1" height="1" viewBox="0 -4 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.931.93a.35.35 0 0 1 .35.35v.654H7.04v-.65a.35.35 0 1 1 .7 0v.65h1.355a1 1 0 0 1 1 1V9.93a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1V2.933a1 1 0 0 1 1-1H2.58V1.28a.35.35 0 0 1 .35-.35M.795 4.8v5.13a.3.3 0 0 0 .3.3h8a.3.3 0 0 0 .3-.3V4.807zm2.633 3.44v.833h-.833V8.24zm2.083 0v.833h-.833V8.24zm2.084 0v.833H6.76V8.24zM3.428 6.25v.833h-.833V6.25zm2.083 0v.833h-.833V6.25zm2.084 0v.833H6.76V6.25zM2.58 2.633H1.095a.3.3 0 0 0-.3.3v1.168l8.6.007V2.933a.3.3 0 0 0-.3-.3H7.74v.465a.35.35 0 0 1-.7 0v-.465H3.28v.46a.35.35 0 0 1-.7 0z" fill="#D8B576"/></svg>
+
+       <p class="last-exchange__date">03.03.2025</p>
+     </div>
+     
+ </div>
+</div>
+
+<div class="swiper-slide swiper-slide-exchanges">
+  <div class="last-exchange__item">
+     <div class="last-exchange__item-svg">
+       <svg class="svg-exchange" width="9" height="10" viewBox="0 -5 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M.794 3.582V3.3c0-.233.168-.422.375-.422h5.625v-.844c0-.376.405-.563.64-.298l1.25 1.406a.46.46 0 0 1 0 .597l-1.25 1.406c-.234.264-.64.079-.64-.298v-.844H1.17c-.207 0-.375-.19-.375-.422M8.42 6.254H2.794V5.41c0-.375-.404-.564-.64-.298L.904 6.518a.46.46 0 0 0 0 .597l1.25 1.406c.235.264.64.078.64-.298v-.844H8.42c.208 0 .375-.19.375-.422v-.281c0-.233-.167-.422-.375-.422" fill="#D8B576"/></g><defs><clipPath id="a"><path fill="#fff" d="M.794.629h8v9h-8z"/></clipPath></defs></svg>
+
+       <p class="last-exchange__rate"> → </p>
+     </div>
+
+       <div class="last-exchange__course-container">
+         <svg  class="svg-exchange" width="13" height="12" viewBox="0 -4 13 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.265 7.435 2.24 6.417 1.213 7.435m9.234-2.626 1.026 1.019 1.026-1.019" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.473 5.828a4.57 4.57 0 0 0-1.352-3.24 4.65 4.65 0 0 0-6.598.07A4.6 4.6 0 0 0 2.5 4.298m-.262 2.117A4.56 4.56 0 0 0 3.296 9.33a4.62 4.62 0 0 0 2.683 1.58 4.65 4.65 0 0 0 3.084-.475 4.6 4.6 0 0 0 2.075-2.314" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.456 7.247c.03.34.193.656.455.879s.601.334.945.312c1.13 0 1.4-.644 1.4-1.19 0-.547-.466-1.127-1.4-1.127s-1.4-.365-1.4-1.111c.013-.258.105-.507.263-.712a1.29 1.29 0 0 1 1.137-.493c.345-.014.682.102.942.326.261.224.425.539.459.879m-1.4 4.122V8.53m0-5.42v.694" stroke="#D8B576" stroke-linecap="round" stroke-linejoin="round"/></svg>
+         <p class="last-exchange__course">1 USDT = 0.998 USD</p>
+       </div>
+
+     <div class="hr"></div>
+
+     <div class="last-exchange__date-container">
+       <svg class="svg-exchange" width="1" height="1" viewBox="0 -4 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.931.93a.35.35 0 0 1 .35.35v.654H7.04v-.65a.35.35 0 1 1 .7 0v.65h1.355a1 1 0 0 1 1 1V9.93a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1V2.933a1 1 0 0 1 1-1H2.58V1.28a.35.35 0 0 1 .35-.35M.795 4.8v5.13a.3.3 0 0 0 .3.3h8a.3.3 0 0 0 .3-.3V4.807zm2.633 3.44v.833h-.833V8.24zm2.083 0v.833h-.833V8.24zm2.084 0v.833H6.76V8.24zM3.428 6.25v.833h-.833V6.25zm2.083 0v.833h-.833V6.25zm2.084 0v.833H6.76V6.25zM2.58 2.633H1.095a.3.3 0 0 0-.3.3v1.168l8.6.007V2.933a.3.3 0 0 0-.3-.3H7.74v.465a.35.35 0 0 1-.7 0v-.465H3.28v.46a.35.35 0 0 1-.7 0z" fill="#D8B576"/></svg>
+
+       <p class="last-exchange__date">03.03.2025</p>
+     </div>
+     
+ </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="swiper-buttons">
+      <div class="custom-prev">
+        <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.721 1.221 10.558 7.75-10.558 9.042" stroke="#D8B576" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="custom-next">
+        <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.721 1.221 10.558 7.75-10.558 9.042" stroke="#D8B576" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+  </div>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="about">
                 <div class="about__header">
                     <h2 class="about__title">Почему KAIROSPAY?</h2>
@@ -137,14 +470,14 @@
                       </div>
     
                       <div class="links-container">
-                        <a href="" class="header__link">
+                        <a href="https://t.me/KAIROSPAY" class="header__link">
                             Смотреть адрес офисов
                             <svg class="header__icon" width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 6.412V.589C0 .065.775-.197 1.227.173L4.79 3.084c.281.23.281.602 0 .83L1.227 6.825C.775 7.197 0 6.935 0 6.412" fill="#000"/>
                             </svg>
                         </a>
     
-                        <a href="" class="header__link main__link">
+                        <a href="https://t.me/KAIROSPAY" class="header__link main__link">
                             Читать отзывы
                             <svg class="header__icon" width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 6.412V.589C0 .065.775-.197 1.227.173L4.79 3.084c.281.23.281.602 0 .83L1.227 6.825C.775 7.197 0 6.935 0 6.412" fill="#000"/>
@@ -156,23 +489,59 @@
             </div>
     
             <div class="actual-accuracy">
+                
                 <h2 class="actual-accuracy__title">Узнай актуальный курс</h2>
                 <p class="actual-accuracy__subtitle">Самый выгодный курс на <span class="text-highlight">обмен / продажу / покупку</span></p>
+
             
                 <div class="actual-accuracy__container">
-                    <div class="actual-accuracy__column">
-                        <div class="actual-accuracy__item"><p class="text-highlight">USDT → USD</p><p class="actual-accuracy__item-font-family">-0.2%</p></div>
-                        <div class="actual-accuracy__item"><p class="text-highlight">USDT → TRY</p><p class="actual-accuracy__item-font-family">35.17</p></div>
-                        <div class="actual-accuracy__item"><p class="text-highlight">USDT → EUR</p><p class="actual-accuracy__item-font-family">1.0326</p></div>
-                        <div class="actual-accuracy__item"><p class="text-highlight">USD → USDT</p><p class="actual-accuracy__item-font-family">-0.6%</p></div>
+
+                    <div class="currency-rates__buttons">
+                        <div class="currency-rates__buttons-row">
+                            <button class="currency-rates__button-one currency-rates__button--active" data-city="istanbul">Оптовые курсы</button>
+                            <button class="currency-rates__button-two" data-city="alanya">Розничные курсы</button>
+                        </div>
                     </div>
-            
-                    <div class="actual-accuracy__column">
-                        <div class="actual-accuracy__item"><p class="text-highlight">RUB → TRY</p><p class="actual-accuracy__item-font-family">2.82</p></div>
-                        <div class="actual-accuracy__item"><p class="text-highlight">RUB → USD</p><p class="actual-accuracy__item-font-family">101.27</p></div>
-                        <div class="actual-accuracy__item"><p class="text-highlight">UAH → TRY</p><p class="actual-accuracy__item-font-family">0.89</p></div>
-                        <div class="actual-accuracy__item"><p class="text-highlight">EUR → USDT</p><p class="actual-accuracy__item-font-family">1.0317</p></div>
-                    </div>
+                    
+                        <div class="currency-rates__images">
+                            <div class="currency-rates__image-group actual-accuracy__column">
+                                <div class="currency-rates__image-item actual-accuracy__item">
+                                    <p class="text-highlight">USDT/USD</p>
+                                    <p class="currency-rates__text actual-accuracy__item-font-family">-0.3%</p>
+                                </div>
+                                <div class="currency-rates__image-item actual-accuracy__item">
+                                    <p class="text-highlight">RUB/TRY</p>
+                                    <p class="currency-rates__text actual-accuracy__item-font-family">2.97</p>
+                                </div>
+                                <div class="currency-rates__image-item actual-accuracy__item">
+                                    <p class="text-highlight">USD/USDT</p>
+                                    <p class="currency-rates__text actual-accuracy__item-font-family">-0.3%</p>
+                                </div>
+                                <div class="currency-rates__image-item actual-accuracy__item">
+                                    <p class="text-highlight">USDT/TRY</p>
+                                    <p class="currency-rates__text actual-accuracy__item-font-family">36.44</p>
+                                </div>
+                            </div>
+                    
+                            <div class="currency-rates__image-group actual-accuracy__column">
+                                <div class="currency-rates__image-item actual-accuracy__item">
+                                    <p class="text-highlight">USDT/EUR</p>
+                                    <p class="currency-rates__text actual-accuracy__item-font-family">1.0287</p>
+                                </div>
+                                <div class="currency-rates__image-item actual-accuracy__item">
+                                    <p class="text-highlight">RUB/USD</p>
+                                    <p class="currency-rates__text actual-accuracy__item-font-family">105.38</p>
+                                </div>
+                                <div class="currency-rates__image-item actual-accuracy__item">
+                                    <p class="text-highlight">UAH/TRY</p>
+                                    <p class="currency-rates__text actual-accuracy__item-font-family">0.87</p>
+                                </div>
+                                <div class="currency-rates__image-item actual-accuracy__item">
+                                    <p class="text-highlight">EUR/USDT</p>
+                                    <p class="currency-rates__text actual-accuracy__item-font-family">1.0225</p> 
+                                </div>
+                            </div>
+                        </div>
             
                     <div class="actual-accuracy__info">
                         <p class="actual-accuracy__info-p">И еще <span class="text-highlight">9 направлений</span></p>
@@ -181,7 +550,7 @@
                     </div>
             
                     <div class="actual-accuracy__vip">
-                        <a href="#" class="header__link">
+                        <a href="https://t.me/KAIROSPAY" class="header__link">
                             Узнать Vip-курсы
                             <svg width="5" height="7" viewBox="0 0 5 7" fill="none"><path d="M0 6.412V.589C0 .065.775-.197 1.227.173L4.79 3.084c.281.23.281.602 0 .83L1.227 6.825C.775 7.197 0 6.935 0 6.412" fill="#000"/></svg>
                         </a>
@@ -189,29 +558,62 @@
                     </div>
                 </div>
     
-                <div class="actual-accuracy__container-mobile">
-                    <div class="accuracy-mobile-container">
+                <div class="currency-rates__images-mobile actual-accuracy__container-mobile">
+                    
+                    <div class="accuracy-mobile-container currency-rates__image-group">
+                        <div class="currency-rates__buttons">
+                            <div class="currency-rates__buttons-row">
+                                <button class="currency-rates__button-one currency-rates__button--active" data-city="istanbul">Оптовые курсы</button>
+                                <button class="currency-rates__button-two" data-city="alanya">Розничные курсы</button>
+                            </div>
+                        </div>
+
                         <div class="actual-accuracy__column">
-                            <div class="actual-accuracy__item"><p class="text-highlight">USDT → USD</p><p class="actual-accuracy__item-font-family">-0.2%</p></div>
-                            <div class="actual-accuracy__item"><p class="text-highlight">USDT → TRY</p><p class="actual-accuracy__item-font-family">35.17</p></div>
+                            <div class="currency-rates__image-item actual-accuracy__item">
+                                <p class="text-highlight">USDT/USD</p>
+                                <p class="currency-rates__text actual-accuracy__item-font-family">-0.3%</p>
+                            </div>
+                            <div class="currency-rates__image-item actual-accuracy__item">
+                                <p class="text-highlight">RUB/TRY</p>
+                                <p class="currency-rates__text actual-accuracy__item-font-family">2.97</p>
+                            </div>
+
                         </div>
         
                         <div class="actual-accuracy__column">
-                            <div class="actual-accuracy__item"><p class="text-highlight">USDT → EUR</p><p class="actual-accuracy__item-font-family">1.0326</p></div>
-                            <div class="actual-accuracy__item"><p class="text-highlight">USD → USDT</p><p class="actual-accuracy__item-font-family">-0.6%</p></div>
+                            <div class="currency-rates__image-item actual-accuracy__item">
+                                <p class="text-highlight">USD/USDT</p>
+                                <p class="currency-rates__text actual-accuracy__item-font-family">-0.3%</p>
+                            </div>
+                            <div class="currency-rates__image-item actual-accuracy__item">
+                                <p class="text-highlight">USDT/TRY</p>
+                                <p class="currency-rates__text actual-accuracy__item-font-family">36.44</p>
+                            </div>
                         </div>
         
                         <div class="actual-accuracy__column">
-                            <div class="actual-accuracy__item"><p class="text-highlight">RUB → TRY</p><p class="actual-accuracy__item-font-family">2.82</p></div>
-                            <div class="actual-accuracy__item"><p class="text-highlight">RUB → USD</p><p class="actual-accuracy__item-font-family">101.27</p></div>
+                            <div class="currency-rates__image-item actual-accuracy__item">
+                                <p class="text-highlight">USDT/EUR</p>
+                                <p class="currency-rates__text actual-accuracy__item-font-family">1.0287</p>
+                            </div>
+                            <div class="currency-rates__image-item actual-accuracy__item">
+                                <p class="text-highlight">RUB/USD</p>
+                                <p class="currency-rates__text actual-accuracy__item-font-family">105.38</p>
+                            </div>
                         </div>
         
                         <div class="actual-accuracy__column">
-                            <div class="actual-accuracy__item"><p class="text-highlight">UAH → TRY</p><p class="actual-accuracy__item-font-family">0.89</p></div>
-                            <div class="actual-accuracy__item"><p class="text-highlight">EUR → USDT</p><p class="actual-accuracy__item-font-family">1.0317</p></div>
+                            <div class="currency-rates__image-item actual-accuracy__item">
+                                <p class="text-highlight">UAH/TRY</p>
+                                <p class="currency-rates__text actual-accuracy__item-font-family">0.87</p>
+                            </div>
+                            <div class="currency-rates__image-item actual-accuracy__item">
+                                <p class="text-highlight">EUR/USDT</p>
+                                <p class="currency-rates__text actual-accuracy__item-font-family">1.0225</p> 
+                            </div>
                         </div>
         
-                        <a href="" class="header__link main__link mobile-link">
+                        <a href="https://t.me/KAIROSPAY" class="header__link main__link mobile-link">
                             И еще 9 направлений
                             <svg class="header__icon" width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 6.412V.589C0 .065.775-.197 1.227.173L4.79 3.084c.281.23.281.602 0 .83L1.227 6.825C.775 7.197 0 6.935 0 6.412" fill="#000"/>
@@ -223,7 +625,7 @@
                         <img src="./assets/images/accuracy-mobile-img.png" alt="">
                         <p class="vip-p-mobile">от $20,000 <br>Эксклюзивные VIP-курсы - <br> <span class="text-highlight">до 0,38% выгоднее!</span></p>
         
-                        <a href="#" class="header__link mobile-link">
+                        <a href="https://t.me/KAIROSPAY" class="header__link mobile-link">
                             Узнать Vip-курсы
                             <svg width="5" height="7" viewBox="0 0 5 7" fill="none"><path d="M0 6.412V.589C0 .065.775-.197 1.227.173L4.79 3.084c.281.23.281.602 0 .83L1.227 6.825C.775 7.197 0 6.935 0 6.412" fill="#000"/></svg>
                         </a>
@@ -232,7 +634,29 @@
                 </div>
             </div>
         </main>
-    
+        
+        <h2 class="map-title">Наши офисы</h2>
+        <div class="map-container">
+            <div class="map-border">
+                <div class="map">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afec5906cf66869e4ec4628d0c8a5db4a0bd4bf90ad1f82eae84844de5c3477a5&amp;width=660&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
+            </div>
+
+
+            <div class="map-block">
+                <h3>Наши офисы</h3>
+                <p>Сеть наших офисов расположена на побережье Турции в городах: <br> <br>
+                    <a href="https://t.me/KAIROSPAY">Стамбул,</a> <a href="https://t.me/KAIROSPAY">Анталья,</a> <a href="https://t.me/KAIROSPAY">Кемер,</a> <a href="https://t.me/KAIROSPAY"></a> <a href="https://t.me/KAIROSPAY">Аланья,</a> <a href="https://t.me/KAIROSPAY">Мерсин.</a></p>
+                <h3>График работы:</h3>
+                <p>Понедельник - Суббота: с 10:00 до 18:30 <br>
+                    Воскресенье - выходной.
+                </p>
+                <h3>Записаться на обмен:</h3>
+                <a href="https://t.me/KAIROSPAY_SUPPORT">@KAIROSPAY_SUPPORT</a>         
+                   <a href="tel:+7 963 761 8585">+7 963 761 8585</a>
+            </div>
+        </div>
     
         <footer>
             <div class="footer-desktop">
@@ -248,7 +672,7 @@
                         <div class="svg-footer-item">
                             <p class="foter-item-p"> <span class="text-highlight">График работы </span> <br> с 10:00 до 21:00 <br>ежедневно</p>
                             <a href="tel:+7(963)762-21-21" class="footer-tel">+7(963)762-21-21</a>
-                            <a href="" class="footer-link header__link">
+                            <a href="https://t.me/KAIROSPAY" class="footer-link header__link">
                                 Telegram- канал
     
                                 <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.844 8.74V1.302a.751.751 0 0 1 1.282-.53L5.844 4.49a.747.747 0 0 1 0 1.06L2.126 9.267A.75.75 0 0 1 .844 8.74" fill="#fff"/></svg>
@@ -273,7 +697,7 @@
                     <div class="svg-footer-item">
                         <p class="foter-item-p"> <span class="text-highlight">График работы </span> <br> с 10:00 до 21:00 <br>ежедневно</p>
                         <a href="tel:+7(963)762-21-21" class="footer-tel">+7(963)762-21-21</a>
-                        <a href="" class="footer-link header__link">
+                        <a href="https://t.me/KAIROSPAY" class="footer-link header__link">
                             Telegram- канал
 
                             <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.844 8.74V1.302a.751.751 0 0 1 1.282-.53L5.844 4.49a.747.747 0 0 1 0 1.06L2.126 9.267A.75.75 0 0 1 .844 8.74" fill="#fff"/></svg>
@@ -290,7 +714,9 @@
     
     </div>
     
-
+    <script src="./scripts/currancy-rates.js"></script>
+    <script src="./scripts/last-exchange-accordion.js"></script>
+    <script src="./scripts/currency.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./scripts/slider.js"></script>
 </body>
