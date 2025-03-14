@@ -1133,6 +1133,7 @@ border-radius:15px;
         }
         .swiper-slide-exchanges{
             width: 320px !important;
+            border: none;
         }
         .header-exchange-container-title{
             width: 360px;
